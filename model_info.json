@@ -1,0 +1,296 @@
+{
+	"paper": {
+		"title": "Adaptive in situ Model Refinement for Surrogate-augmented Population-based Optimization",
+		"authors": "Payam Ghassemi, Ali Mehmani, Souma Chowdhury",
+		"journal": "Structural and Multidisciplinary Optimization",
+		"publisher": "Springer",
+		"year": 2020
+	},
+	"models": {
+		"six-hump": {
+			"pso-amr": {
+				"initial": {
+					"model-type": "Kriging",
+					"model-kernel": "Exponential",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 1.6000,
+						"beta": 0.1619,
+						"sigma2": 451.3734
+					},
+					"sample-size": 20
+					},
+				"final": {
+					"model-type": "Kriging",
+					"model-kernel": "Exponential",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 2.2276,
+						"sigma2": 4.2039e3
+					},
+					"sample-size": 30
+					},
+				"dataset": "Benchmark_SixHump_AMR.txt",
+				"optimum": -1.0268
+				},
+			"pso-amr-local": {
+				"initial": {
+					"model-type": "Kriging",
+					"model-kernel": "Exponential",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.8000,
+						"beta": 0.8648,
+						"sigma2": 1.3513e3
+					},
+					"dataset": [],
+					"sample-size": 20
+					},
+				"final": {
+					"model-type": "Kriging",
+					"model-kernel": "Exponential",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.8000,
+						"beta": 1.1966,
+						"sigma2": 1.2396e3
+					},
+					"sample-size": 30
+					},
+				"dataset": "Benchmark_SixHump_AMRLocal.txt",
+				"optimum": -1.0265
+				},
+			"pso-sbo-k1": {
+				"optimum": -0.7612
+				},
+			"pso-sbo-k2": {
+				"optimum": -0.9963
+				}
+			},
+		"2d-branin-hoo": {
+			"pso-amr": {
+				"initial": {
+					"model-type": "RBF",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 20
+					},
+				"final": {
+					"model-type": "RBFReg",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 30
+					},
+				"dataset": "Benchmark_BraninHoo_AMR.txt",
+				"optimum": 0.5692
+				},
+			"pso-amr-local": {
+				"initial": {
+					"model-type": "RBF",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 20
+					},
+				"final": {
+					"model-type": "RBF",
+					"model-kernel": "TPS",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 30
+					},
+				"dataset": "Benchmark_BraninHoo_AMRLocal.txt",
+				"optimum": 0.3985
+				},
+			"pso-sbo-k1": {
+				"model-type": "RBF",
+				"model-kernel": "TPS",
+				"model-regresion": [],
+				"hyper-parameters": {
+					"C": 0.9000
+				},
+				"dataset": "Benchmark_BraninHoo_SBO.txt",
+				"sample-size": 30,
+				"optimum": 0.5080
+				}
+			},
+		"5d-dixon-price": {
+			"pso-amr": {
+				"initial": {
+					"model-type": "RBF",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 50
+					},
+				"final": {
+					"model-type": "RBF",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 75
+					},
+				"dataset": "Benchmark_DixonPrice_AMR.txt",
+				"optimum": 2.7953
+				},
+			"pso-amr-local": {
+				"initial": {
+					"model-type": "RBF",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 50
+					},
+				"final": {
+					"model-type": "RBF",
+					"model-kernel": "Multiquadric",
+					"model-regresion": [],
+					"hyper-parameters": {
+						"C": 0.9000
+					},
+					"sample-size": 75
+					},
+				"dataset": "Benchmark_DixonPrice_AMRLocal.txt",
+				"optimum": 25.4214
+				},
+			"pso-sbo-k1": {
+				"model-type": "Kriging",
+				"model-kernel": "Exponential",
+				"model-regresion": "Constant",
+				"hyper-parameters": {
+					"theta": 0.1000,
+					"beta": 2.3562,
+					"sigma2": 1.1358e10 
+				},
+				"dataset": "Benchmark_DixonPrice_SBO.txt",
+				"sample-size": 75,
+				"optimum": 247.9388
+				}
+			},
+		"20d-griewank": {
+			"pso-amr": {
+				"initial": {
+					"model-type": "Kriging",
+					"model-kernel": "Gaussian",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 1.2286,
+						"sigma2": 1.0597e4
+					},
+					"sample-size": 200
+					},
+				"final": {
+					"model-type": "Kriging",
+					"model-kernel": "Gaussian",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 1.5031,
+						"sigma2": 8.4268e3 
+					},
+					"sample-size": 300
+					},
+				"dataset": "Benchmark_Griewank_AMR.txt",
+				"optimum": 1.7360
+				},
+			"pso-amr-local": {
+				"initial": {
+					"model-type": "Kriging",
+					"model-kernel": "Gaussian",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 1.2202,
+						"sigma2": 9.6152e3
+					},
+					"sample-size": 200
+					},
+				"final": {
+					"model-type": "Kriging",
+					"model-kernel": "Gaussian",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 0.8915,
+						"sigma2": 9.1959e3
+					},
+					"sample-size": 300
+					},
+				"dataset": "Benchmark_Griewank_AMRLocal.txt",
+				"optimum": 1.9471
+				},
+			"pso-sbo-k1": {
+				"model-type": "Kriging",
+				"model-kernel": "Gaussian",
+				"model-regresion": "Constant",
+				"hyper-parameters": {
+					"theta": 0.1000,
+					"beta": 1.4904,
+					"sigma2": 7.2044e3 
+				},
+				"dataset": "Benchmark_Griewank_SBO.txt",
+				"sample-size": 300,
+				"optimum": 2.4090
+				}
+			},
+		"building-energy-management": {
+			"pso-amr": {
+				"initial": {
+					"model-type": "Kriging",
+					"model-kernel": "Exponential",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 1.4113,
+						"sigma2": 0.0023
+					},
+					"sample-size": 160
+					},
+				"final": {
+					"model-type": "Kriging",
+					"model-kernel": "Exponential",
+					"model-regresion": "Constant",
+					"hyper-parameters": {
+						"theta": 0.1000,
+						"beta": 1.7451,
+						"sigma2": 0.0014
+					},
+					"sample-size": 320
+					},
+				"dataset": "Application_Building_AMR.txt",
+				"optimum": 1026.10
+				},
+			"pso-sbo": {
+				"model-type": "Kriging",
+				"model-kernel": "Exponential",
+				"model-regresion": "Constant",
+				"hyper-parameters": {
+					"theta": 0.1000,
+					"beta": 1.6816,
+					"sigma2": 0.0014
+				},
+				"sample-size": 320,
+				"dataset": "Application_Building_SBO.txt",
+				"optimum": 1038.10
+				}
+			}
+	}
+}
