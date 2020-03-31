@@ -1,6 +1,8 @@
 # amr-samples-metamodels-package
-This repository contains data for training and testing metamodels (Kriging, RBF, ...) that are used in a new surrogate based optimization (SBO) process called adaptive model refinement. The resulting trained metamodels are also included in this package. For further information on the usage of this data set or the new SBO method associated with it, please refer to our paper:
+This repository contains data for training and testing metamodels (Kriging, RBF, ...) that are used in a new surrogate based optimization (SBO) process called adaptive model refinement. The resulting trained metamodels are also included in this package. For further information on this data set or the new SBO method associated with it, please refer to our paper:
 Ghassemi, P., Mehmani, A., and Chowdhury, S., Adaptive In-Situ Model Refinement for Surrogate-augmented Population-based Optimization, Structural and Multidisciplinary Optimization. April 2020. Springer. https://doi.org/10.1007/s00158-020-02592-6 
+
+The following sections provide further information on the usage of this data set and its corresponding metamodels: 
 
 # JSON File 
 The metamodel (surrogate model) hyperparameters and the paper information are included in the JSON file "model_info.json". This JSON file has two main enteries (field names):
