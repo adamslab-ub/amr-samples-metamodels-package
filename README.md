@@ -1,6 +1,6 @@
 # amr-samples-metamodels-package
 This repository contains the sample points (data set) and the metamodels, as a part of our journal paper:
-Ghassemi, P., Mehmani, A., and Chowdhury, S., Adaptive In-Situ Model Refinement for Surrogate-augmented Population-based Optimization, Structural and Multidisciplinary Optimization. April 2020. Springer.
+Ghassemi, P., Mehmani, A., and Chowdhury, S., Adaptive In-Situ Model Refinement for Surrogate-augmented Population-based Optimization, Structural and Multidisciplinary Optimization. April 2020. Springer. https://doi.org/10.1007/s00158-020-02592-6 
 
 
 # JSON File 
